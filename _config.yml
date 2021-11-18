@@ -25,8 +25,8 @@ footer:
   show_powered_by: true
   contact:
     - name: Email
-      value: yourmail@domain.com
-      link: mailto:yourmail@domain.com
+      value: kimsj8912@kookmin.ac.kr
+      link: mailto:kimsj8912@kookmin.ac.kr
     - name: WeChat
       value: YourWeChatUsername
       link: "#"
