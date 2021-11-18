@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+          <header class="post-header">
+
+            {% if page.draft %}
+              {% include draft-banner.html %}
+            {% endif %}
+
+            <h1 class="post-title">
+            {% if page.headline_formatted_title %}
+              {{ page.headline_formatted_title | newline_to_br }}
+            {% else %}
+              {{ page.title }}
+            {% endif %}
+            </h1>
+
+            {% if page.subtitle %}<h1 class="post-subtitle">{{ page.subtitle }}</h1>{% endif %}
+            <p class="post-meta"><span class="post-date">{{ page.date | date: "%B %-d, %Y" }}
+            </span>{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+          </header>
+
+          <article class="post-content">
+            {{ content }}
+          </article>
+
+          {% if page.draft %}
+              {% include draft-banner.html %}
+          {% endif %}
+
+      </div>
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    {% include foot.html %}
+  </body>
+</html>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    let PAGE_URL = "{{site.url}}[{page.url}}"
+    let PAGE_IDENTIFIER = "{{page.url}}"
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://lyrical-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
