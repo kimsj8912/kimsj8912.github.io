@@ -1,7 +1,7 @@
 kimsj8912.github.io
 Kookmin Univ. CS 20212974 김서정
 
-### 나만의 블로그 만들기 프로젝트
+### 나만의 블로그 만들기 프로젝트 진행 과정 소개
   ## 1. Github Page 시작하기
     - Repository 생성
        Github에서 <username>/github.io 를 이름으로 하는 저장소 생성
